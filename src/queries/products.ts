@@ -9,8 +9,9 @@ export function useAvailableProducts() {
     "available-products",
     async () => {
       const res = await axios.get<AvailableProduct[]>(
-        `${API_PATHS.bff}/product/available`
+        `${API_PATHS.bff}/products`
       );
+      console.log("HERE WE ARE", res);
       return res.data;
     }
   );
